@@ -1,8 +1,6 @@
-#RQ1: How does the process type of the verb influence the temporal semantics of the nominal in the clause? 
 
-#  (multinomial) logistic multiple regression:
-#  - dependent variable: process type (6 levels?, categorical)
-#  - independent variable: temporal semantic structure (4 levels, categorical)
+#  (multinomial) logistic regression:
+
 
 
 library(nnet)
@@ -55,9 +53,11 @@ plot_model(test, "eff",title = "", axis.title = "Prediction Rate")
 
 plot_model(test, "eff",title = "", axis.title = c("Process Type", "Prediction Rate"))
 
+#To get prediction accuracy.
+
 table(predict(test)==RQ1$LA)
 
-# To show full results, use this code. 
+# To show full results. 
 modelData = get_model_data(test, "eff")
 
 as.data.frame(modelData$Process_Type)
