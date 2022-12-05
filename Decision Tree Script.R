@@ -2,8 +2,6 @@
 #Name 'MyData'. 
 #Add semelfactive level
 
-MyData$LA <- factor(MyData$LA, levels = c(levels(MyData$LA), "SEM"))
-
 #Create Tree 
 
 MyData$LA<-as.factor(MyData$LA)
@@ -18,9 +16,11 @@ MyData$TC<-as.factor(MyData$TC)
 MyData$Underived<-as.factor(MyData$Underived)
 MyData$Abs.Conc<-as.factor(MyData$Abs.Conc)
 MyData$Count.Mass<-as.factor(MyData$Count.Mass)
-MyData$Register<-as.factor(MyData$Register)
+MyData$Genre<-as.factor(MyData$Genre)
 
 set.seed(129)
+
+library(party)
 
 my.model.tree = ctree(MyData$LA ~ MyData$Borrowing + MyData$Compound + MyData$MDA + MyData$MDN + MyData$MDV +MyData$Other + MyData$TC + MyData$Underived + MyData$Count.Mass + MyData$Abs.Conc + MyData$Register, data = MyData)
 
