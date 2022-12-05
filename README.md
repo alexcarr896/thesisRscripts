@@ -3,4 +3,6 @@ Four R scripts are available in this repository that each relate to my thesis. E
 
 The first script shows the code used to conduct the Classification and Regression Tree analysis. 
 
-The second script
+The second script shows the code used to conduct the Multinomial Logistic Regression analysis, using the nominal 'game' as an example. 
+
+
