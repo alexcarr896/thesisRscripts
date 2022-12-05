@@ -45,3 +45,9 @@ PT = pairwiseNominalIndependence(DMatrix,
 
 #See results of PT (Pairwise tests)
 PT
+
+library(vcd)
+#measure the EFFECT SIZE - need vcd packages described above^
+table(All_nreps$WF, All_nreps$LA)->MyTable1
+
+assocstats(MyTable1)
